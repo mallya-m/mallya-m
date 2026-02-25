@@ -1,16 +1,19 @@
-## Hi there 👋
+Hi, I'm Mallya 👋
 
-<!--
-**mallya-m/mallya-m** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+First-year Computer Science student focused on backend systems and open-source development.
 
-Here are some ideas to get you started:
+Currently:
+- Building DevTrack (Full-stack Issue Management System)
+- Preparing for Google Summer of Code 2026
+- Contributing to open-source projects
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+Tech Stack:
+JavaScript | Node.js | Express | MongoDB | React | Git | Docker (learning)
+
+Interests:
+Backend architecture
+Developer tooling
+Security-oriented systems
+
+Goal:
+Become a strong open-source backend engineer.
