@@ -1,0 +1,9 @@
+<svg viewBox="0 0 800 120" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, 'Segoe UI', sans-serif">
+  <rect width="800" height="120" fill="#0A0C14"/>
+  <text x="400" y="55" text-anchor="middle" fill="#7C86A3" font-size="14">
+    the real contribution snake appears here after the "Generate Snake" Action runs once
+  </text>
+  <text x="400" y="78" text-anchor="middle" fill="#4B5568" font-size="12">
+    go to Actions → Generate Snake → Run workflow
+  </text>
+</svg>

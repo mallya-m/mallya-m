@@ -1,0 +1,150 @@
+<svg viewBox="0 0 1200 420" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <linearGradient id="baseSky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0A0C14"/>
+      <stop offset="100%" stop-color="#0A0C14"/>
+    </linearGradient>
+
+    <radialGradient id="auroraA" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7C6BFF" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#7C6BFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="auroraB" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22D3EE" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="auroraC" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F472B6" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#F472B6" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="cardStroke" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.05"/>
+    </linearGradient>
+
+    <linearGradient id="accentBar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22D3EE"/>
+      <stop offset="50%" stop-color="#7C6BFF"/>
+      <stop offset="100%" stop-color="#F472B6"/>
+    </linearGradient>
+
+    <filter id="blurBig" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="60"/>
+    </filter>
+
+    <filter id="cardGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="18" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#FFFFFF" stroke-opacity="0.035" stroke-width="1"/>
+    </pattern>
+
+    <clipPath id="frame">
+      <rect x="0" y="0" width="1200" height="420" rx="0"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="420" fill="url(#baseSky)"/>
+    <rect width="1200" height="420" fill="url(#grid)"/>
+
+    <!-- slow-drifting aurora blobs -->
+    <g filter="url(#blurBig)">
+      <circle cx="220" cy="140" r="220" fill="url(#auroraA)">
+        <animate attributeName="cx" values="220;300;220" dur="14s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="140;190;140" dur="18s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="980" cy="120" r="240" fill="url(#auroraB)">
+        <animate attributeName="cx" values="980;900;980" dur="16s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="120;180;120" dur="12s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="650" cy="360" r="260" fill="url(#auroraC)">
+        <animate attributeName="cx" values="650;730;650" dur="20s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    <!-- fine constellation lines, drifting and twinkling -->
+    <g stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="1">
+      <line x1="80" y1="70" x2="180" y2="110">
+        <animate attributeName="x1" values="80;92;80" dur="9s" repeatCount="indefinite"/>
+        <animate attributeName="y2" values="110;122;110" dur="11s" repeatCount="indefinite"/>
+      </line>
+      <line x1="180" y1="110" x2="140" y2="190">
+        <animate attributeName="x2" values="140;128;140" dur="10s" repeatCount="indefinite"/>
+      </line>
+      <line x1="1000" y1="60" x2="1080" y2="130">
+        <animate attributeName="y1" values="60;74;60" dur="12s" repeatCount="indefinite"/>
+      </line>
+      <line x1="1080" y1="130" x2="1030" y2="210">
+        <animate attributeName="x2" values="1030;1044;1030" dur="9.5s" repeatCount="indefinite"/>
+      </line>
+      <line x1="60" y1="330" x2="150" y2="300">
+        <animate attributeName="y2" values="300;312;300" dur="8s" repeatCount="indefinite"/>
+      </line>
+    </g>
+    <g fill="#FFFFFF">
+      <circle cx="80" cy="70" r="2">
+        <animate attributeName="cx" values="80;92;80" dur="9s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.3;0.9;0.3" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="180" cy="110" r="2.4">
+        <animate attributeName="opacity" values="0.9;0.3;0.9" dur="4s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="140" cy="190" r="1.8">
+        <animate attributeName="cx" values="140;128;140" dur="10s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.4;1;0.4" dur="3.6s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="1000" cy="60" r="2">
+        <animate attributeName="cy" values="60;74;60" dur="12s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="1;0.35;1" dur="2.8s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="1080" cy="130" r="2.6">
+        <animate attributeName="cx" values="1080;1094;1080" dur="9.5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.4;1;0.4" dur="3.2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="1030" cy="210" r="1.8">
+        <animate attributeName="opacity" values="0.9;0.3;0.9" dur="4.2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="60" cy="330" r="1.6">
+        <animate attributeName="opacity" values="0.3;0.8;0.3" dur="3.4s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="150" cy="300" r="2">
+        <animate attributeName="cy" values="300;312;300" dur="8s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8;0.3;0.8" dur="3.8s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    <!-- top-of-frame accent line -->
+    <rect x="0" y="0" width="1200" height="3" fill="url(#accentBar)"/>
+
+    <!-- glass card -->
+    <g filter="url(#cardGlow)">
+      <rect x="80" y="128" width="600" height="170" rx="20"
+            fill="#FFFFFF" fill-opacity="0.045" stroke="url(#cardStroke)" stroke-width="1.2"/>
+    </g>
+
+    <text x="112" y="196" fill="#F8FAFC" font-size="40" font-weight="600" letter-spacing="0.5">Mallya Moni</text>
+    <text x="112" y="228" fill="#9FB0D0" font-size="15" letter-spacing="0.5">
+      Creative Full-Stack Developer · UI/UX Designer · AI Builder
+    </text>
+
+    <!-- small tag row -->
+    <g font-size="12" fill="#0A0C14" font-weight="600">
+      <rect x="112" y="248" width="94" height="26" rx="13" fill="#22D3EE" opacity="0.9"/>
+      <text x="128" y="265">Building</text>
+
+      <rect x="214" y="248" width="102" height="26" rx="13" fill="#7C6BFF" opacity="0.9"/>
+      <text x="230" y="265">Designing</text>
+
+      <rect x="324" y="248" width="88" height="26" rx="13" fill="#F472B6" opacity="0.9"/>
+      <text x="340" y="265">Learning</text>
+    </g>
+
+    <text x="1120" y="400" fill="#5B6478" font-size="12" text-anchor="end" letter-spacing="1">
+      scroll — the island is right below
+    </text>
+  </g>
+</svg>
